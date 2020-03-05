@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>DK Mall - Streams</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script src="assets/js/html-importer.js"></script>
+	</head>
+	<body class="is-preload">
+
+			<div id="wrapper">
+
+        <header id="header" class="alt style2">
+          <a href="index.html" class="logo"><strong>Streams</strong> <span>Passionate Oortians, streaming directly to you</span></a>
+          <nav>
+            <a href="#menu">Menu</a>
+          </nav>
+        </header>
+
+        <nav id="menu">
+          <script>HTMLImporter.import("templates/nav.html");</script>
+        </nav>
+
+					<section id="banner" class="style2">
+						<div class="inner">
+							<span class="image">
+								<img src="images/pic07.jpg" alt="" />
+							</span>
+							<header class="major">
+								<h1 data-bind="text: streams_about.title.value"></h1>
+							</header>
+							<div class="content">
+								<p data-bind="html: streams_about.body.value"></p>
+							</div>
+						</div>
+					</section>
+
+					<div id="main">
+
+							<section id="one" class="spotlights" data-bind="foreach: streamList">
+
+                <article data-bind="style: { backgroundImage: 'url(\'' + image.value[0].url + '\')' }">
+									<span class="image">
+										<img data-bind="attr: { src: image.value[0].url, alt: alt.value }"/>
+									</span>
+                  <header class="major">
+                    <h3 data-bind="text: title.value"><a data-bind="attr: { href: url.value }" class="link"></a></h3>
+                    <p data-bind="html: body.value"></p>
+                  </header>
+                </article>
+
+							</section>
+
+					</div>
+
+        <script>HTMLImporter.import("templates/footer.html");</script>
+
+			</div>
+
+		<!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/knockout.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+	</body>
+
+</html>

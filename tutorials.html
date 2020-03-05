@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+  <title>DK Mall - Tutorials</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
+  <link href="assets/css/main.css" rel="stylesheet"/>
+  <noscript>
+    <link href="assets/css/noscript.css" rel="stylesheet"/>
+  </noscript>
+  <script src="assets/js/html-importer.js"></script>
+</head>
+  <body class="is-preload">
+
+  <!-- Wrapper -->
+    <div id="wrapper">
+
+      <!-- Header -->
+      <!-- Note: The "styleN" class below should match that of the banner element. -->
+      <header class="alt style2" id="header">
+        <a class="logo" href="index.html"><strong>Tutorials</strong>
+          <span>Find answers to your Boundless questions</span></a>
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <script>HTMLImporter.import("templates/nav.html");</script>
+      </nav>
+
+      <!-- Banner -->
+      <!-- Note: The "styleN" class below should match that of the header element. -->
+      <section class="style2" id="banner">
+        <div class="inner">
+          <span class="image">
+            <img alt="" src="images/pic07.jpg"/>
+          </span>
+          <header class="major">
+            <h1 data-bind="text: tutorials_about.title.value"></h1>
+          </header>
+          <div class="content">
+            <p data-bind="html: tutorials_about.body.value"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main -->
+      <div id="main">
+
+        <!-- One -->
+        <section class="spotlights" data-bind="foreach: tutorialList" id="one">
+
+          <section>
+            <a class="image">
+              <img alt="" data-position="center center" src="images/pic08.jpg"/>
+            </a>
+            <div class="content">
+              <div class="inner">
+                <header class="major">
+                  <h3 data-bind="text: title.value"></h3>
+                </header>
+                <div data-bind="html: body.value"></div>
+              </div>
+            </div>
+          </section>
+
+        </section>
+
+      </div>
+
+      <script>HTMLImporter.import("templates/footer.html");</script>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/knockout.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+  </body>
+
+</html>
