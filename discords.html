@@ -21,7 +21,7 @@
 				<!-- Header -->
 				<!-- Note: The "styleN" class below should match that of the banner element. -->
         <header id="header" class="alt style2">
-          <a href="index.html" class="logo"><strong>YouTube Channels</strong> <span>Be in the know</span></a>
+          <a href="index.html" class="logo"><strong>Discords</strong> <span>Be neighborly</span></a>
           <nav>
             <a href="#menu">Menu</a>
           </nav>
@@ -32,40 +32,46 @@
           <script>HTMLImporter.import("templates/nav.html");</script>
         </nav>
 
-				<!-- Banner -->
-				<!-- Note: The "styleN" class below should match that of the header element. -->
-					<section id="banner" class="style2">
-						<div class="inner">
+        <!-- Banner -->
+        <!-- Note: The "styleN" class below should match that of the header element. -->
+        <section id="banner" class="style2">
+          <div class="inner">
 							<span class="image">
 								<img src="images/pic07.jpg" alt="" />
 							</span>
-							<header class="major">
-								<h1 data-bind="text: youtube_about.title.value"></h1>
-							</header>
-							<div class="content">
-								<p data-bind="html: youtube_about.body.value"></p>
-							</div>
-						</div>
-					</section>
+            <header class="major">
+              <h1 data-bind="text: discords_about.title.value"></h1>
+            </header>
+            <div class="content">
+              <p data-bind="html: discords_about.body.value"></p>
+            </div>
+          </div>
+        </section>
+
 
 				<!-- Main -->
 					<div id="main">
 
 						<!-- One -->
-
-							<section id="one" class="tiles" data-bind="foreach: youtubeChannelList">
-
-                <article data-bind="style: { backgroundImage: 'url(\'' + image.value[0].url + '\')' }">
-									<span class="image">
-										<img data-bind="attr: { src: image.value[0].url, alt: alt.value }"/>
-									</span>
-                  <header class="major">
-                    <h3 data-bind="text: title.value"><a data-bind="attr: { href: url.value }" class="link"></a></h3>
-                    <p data-bind="html: body.value"></p>
-                  </header>
-                </article>
-
-							</section>
+            <section id="one">
+              <section id="contact">
+                <div class="inner">
+                  <section>
+                    <h3>Discords TEST</h3>
+                  </section>
+                  <section class="split" data-bind="foreach: discordList">
+                    <section>
+                      <div class="contact-method">
+                        <a data-bind="attr: { href: url.value }" target="_blank">
+                          <h3 data-bind="text: title.value"></h3>
+                        </a>
+                        <span data-bind="html: body.value"></span>
+                      </div>
+                    </section>
+                  </section>
+                </div>
+              </section>
+            </section>
 
 					</div>
 

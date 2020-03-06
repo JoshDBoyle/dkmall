@@ -15,6 +15,8 @@
         model.streamList.push(item.elements);
       } else if (name.includes('useful_link_')) {
         model.usefulLinkList.push(item.elements);
+      } else if (name.includes('discord_')) {
+        model.discordList.push(item.elements);
       } else if (name.includes('youtube_channel_')) {
         model.youtubeChannelList.push(item.elements);
       } else {
