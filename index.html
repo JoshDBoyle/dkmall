@@ -25,13 +25,13 @@
           <script>HTMLImporter.import("templates/nav.html");</script>
         </nav>
 
-					<section id="banner" class="major">
+					<section id="banner" class="major" data-bind="style: { backgroundImage: 'url(\'' + welcome.background_image.value[0].url + '\')' }">
 						<div class="inner">
 							<header class="major">
-								<h1>Welcome to DK Mall</h1>
+								<h1 data-bind="text: welcome.title.value"></h1>
 							</header>
 							<div class="content">
-								<p>A site dedicated to all things Boundless</p>
+								<p data-bind="html: welcome.body.value"></p>
 								<ul class="actions">
 									<li><a href="#one" class="button next scrolly">Take a Look</a></li>
 								</ul>
