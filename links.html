@@ -5,84 +5,80 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>DK Mall - YouTube Channels</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <script src="assets/js/html-importer.js"></script>
-	</head>
-	<body class="is-preload">
+<head>
+  <title>DK Mall - YouTube Channels</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <script src="assets/js/html-importer.js"></script>
+</head>
+<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <!-- Wrapper -->
+  <div id="wrapper">
 
-				<!-- Header -->
-				<!-- Note: The "styleN" class below should match that of the banner element. -->
-        <header id="header" class="alt style2">
-          <a href="index.html" class="logo"><strong>YouTube Channels</strong> <span>Be in the know</span></a>
-          <nav>
-            <a href="#menu">Menu</a>
-          </nav>
+    <!-- Header -->
+    <!-- Note: The "styleN" class below should match that of the banner element. -->
+    <header id="header" class="alt style2">
+      <a href="index.html" class="logo"><strong>Useful Links</strong> <span>Be in the know</span></a>
+      <nav>
+        <a href="#menu">Menu</a>
+      </nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+      <script>HTMLImporter.import("templates/nav.html");</script>
+    </nav>
+
+    <!-- Banner -->
+    <!-- Note: The "styleN" class below should match that of the header element. -->
+    <section id="banner" class="style2">
+      <div class="inner">
+                <span class="image">
+                  <img src="images/pic07.jpg" alt="" />
+                </span>
+        <header class="major">
+          <h1 data-bind="text: useful_links_about.title.value"></h1>
         </header>
+        <div class="content">
+          <p data-bind="html: useful_links_about.body.value"></p>
+        </div>
+      </div>
+    </section>
 
-				<!-- Menu -->
-        <nav id="menu">
-          <script>HTMLImporter.import("templates/nav.html");</script>
-        </nav>
 
-				<!-- Banner -->
-				<!-- Note: The "styleN" class below should match that of the header element. -->
-					<section id="banner" class="style2">
-						<div class="inner">
-							<span class="image">
-								<img src="images/pic07.jpg" alt="" />
-							</span>
-							<header class="major">
-								<h1 data-bind="text: youtube_about.title.value"></h1>
-							</header>
-							<div class="content">
-								<p data-bind="html: youtube_about.body.value"></p>
-							</div>
-						</div>
-					</section>
+    <!-- Main -->
+    <div id="main">
 
-				<!-- Main -->
-					<div id="main">
+      <!-- One -->
+      <section id="one" class="useful-link-list">
+        <div class="inner" data-bind="foreach: usefulLinkList">
+          <header class="major">
+            <a data-bind="attr: { href: url.value }" target="_blank"><h3 data-bind="text: title.value"></h3></a>
+          </header>
+          <p data-bind="html: description.value"></p>
+          <hr/>
+        </div>
+      </section>
 
-						<!-- One -->
+    </div>
 
-							<section id="one" class="tiles" data-bind="foreach: youtubeChannelList">
+    <script>HTMLImporter.import("templates/footer.html");</script>
 
-                <article data-bind="style: { backgroundImage: 'url(\'' + image.value[0].url + '\')' }">
-									<span class="image">
-										<img data-bind="attr: { src: image.value[0].url, alt: alt.value }"/>
-									</span>
-                  <header class="major">
-                    <h3 data-bind="text: title.value"><a data-bind="attr: { href: url.value }" class="link"></a></h3>
-                    <p data-bind="html: body.value"></p>
-                  </header>
-                </article>
+  </div>
 
-							</section>
-
-					</div>
-
-        <script>HTMLImporter.import("templates/footer.html");</script>
-
-			</div>
-
-		<!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/knockout.js"></script>
-    <script src="assets/js/custom.js"></script>
-	</body>
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/knockout.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
 
 </html>

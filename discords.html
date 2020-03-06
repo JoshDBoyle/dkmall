@@ -53,24 +53,14 @@
 					<div id="main">
 
 						<!-- One -->
-            <section id="one">
-              <section id="contact">
-                <div class="inner">
-                  <section>
-                    <h3>Discords TEST</h3>
-                  </section>
-                  <section class="split" data-bind="foreach: discordList">
-                    <section>
-                      <div class="contact-method">
-                        <a data-bind="attr: { href: url.value }" target="_blank">
-                          <h3 data-bind="text: title.value"></h3>
-                        </a>
-                        <span data-bind="html: body.value"></span>
-                      </div>
-                    </section>
-                  </section>
-                </div>
-              </section>
+            <section id="one" class="discord-list">
+              <div class="inner" data-bind="foreach: discordList">
+                <header class="major">
+                  <a data-bind="attr: { href: url.value }" target="_blank"><h3 data-bind="text: title.value"></h3></a>
+                </header>
+                <p data-bind="html: body.value"></p>
+                <hr/>
+              </div>
             </section>
 
 					</div>
